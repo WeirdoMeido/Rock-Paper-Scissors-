@@ -1,0 +1,11 @@
+body {
+   display: flex; 
+   align-items: center;
+   justify-content: center;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.heading {
+color: rgb(101, 172, 235);
+font-weight: bold;
+}
