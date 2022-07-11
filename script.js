@@ -1,5 +1,4 @@
-let playerInitial = 0;
-let computerInitial = 0;
+let playerInitial = 0, computerInitial = 0
 let compSelect = ['Rock', 'Paper', 'Scissors'];
 
 function computerPlay() {
@@ -36,23 +35,17 @@ return "It's a tie!";
 
 function game(playerSelection) {
 
-    for (i = 1; i <=5; i++) {
         playRound(playerSelection);
         if (playRound(playerSelection) === 'You win! Rock beats scissors' || playRound(playerSelection) === 'You win! Paper beats rock' || playRound(playerSelection) === 'You win! Scissors beats paper'){
             let playerScore = ++playerInitial;
             return `Good job! Your score is ${playerScore}!`;
-        } else if (playRound(playerSelection) === 'You lose! Paper beats rock' || playRound(playerSelection) === 'You lose! Scissors beats paper' || playRound(playerSelection) === 'You lose! Rock beats scissors'){
+        } 
+        else if (playRound(playerSelection) === 'You lose! Paper beats rock' || playRound(playerSelection) === 'You lose! Scissors beats paper' || playRound(playerSelection) === 'You lose! Rock beats scissors'){
             let computerScore = ++computerInitial;
             return `Too bad! The computer's score is ${computerScore}!`;
-        } else if (playRound(playerSelection) === "It's a tie!"){
+        } 
+        else {
             return "Close enough! It's a tie!";
         }
     }
-        if (playerScore > computerScore) {
-            return "Excellent! You win!";
-        }else if (playerScore < computerScore) {
-        return "Too bad! You lose!";
-    }else {
-        return "Try again! It's a tie!";
-    }
-}
+
