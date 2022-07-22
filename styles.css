@@ -2,22 +2,15 @@ body {
    display: flex;
    flex-direction: column; 
    align-items: center;
-   justify-content: center;
+   justify-content: space-around;
    font-family: 'Courier New', Courier, monospace;
    background-color: #FDF1F0;
-   margin-top: 100px;
+   height: 100vh;
 }
 
 .heading {
 color: rgb(0, 0, 0);
 font-weight: bold;
-}
-
-.buttons {
-   display: flex;
-   flex-grow: 1;
-   align-items: center;
-   justify-content: space-around;
 }
 
 .parag {
