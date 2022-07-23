@@ -24,3 +24,10 @@ font-weight: bold;
    display: flex;
    gap: 20px;
 }
+
+button {
+   padding: 10px;
+   font-weight: bold;
+   font-size: 15px;
+   border:rgb(0, 0, 0) solid;
+}

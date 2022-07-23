@@ -1,3 +1,31 @@
+const roca = document.querySelector('.roca');
+const papel = document.querySelector('.papel');
+const tijera = document.querySelector('.tijera');
+const btn = document.querySelector('.btn');
+const textDiv = document.querySelector('.parag');
+
+btn.addEventListener('click', playRound);
+
+roca.addEventListener('click', rockFunc);
+papel.addEventListener('click', paperFunc);
+tijera.addEventListener('click', scisFunc);
+
+
+
+
+
+function rockFunc() {
+    return "ROCK";
+}
+
+function paperFunc() {
+    return "PAPER";
+}
+
+function scisFunc() {
+    return "SCISSORS";
+}
+
 let playerScore = 0, computerScore = 0;
 let compSelect = ['Rock', 'Paper', 'Scissors'];
 
@@ -6,7 +34,7 @@ function computerPlay() {
    }
 
 
-function playRound (playerSelection) {
+function playRound (playerSelection = window.addEventListener('click', )) {
 
     let computerSelection = computerPlay();
 
@@ -34,7 +62,7 @@ return "It's a tie!";
 }
 
 
-
+/*
 function game(playerSelection = prompt("Rock, Paper or Scissors?")) {
 
         playRound(playerSelection);
@@ -63,3 +91,5 @@ function game(playerSelection = prompt("Rock, Paper or Scissors?")) {
     } else {
         alert("It's a tie! Try playing again!~");
     }
+
+    */
