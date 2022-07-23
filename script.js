@@ -4,14 +4,20 @@ const tijera = document.querySelector('.tijera');
 const btn = document.querySelector('.btn');
 const textDiv = document.querySelector('.parag');
 
+roca.addEventListener('click', () => {
+    console.log("Rock");
+});
+
+papel.addEventListener('click', () => {
+    console.log("Paper");
+});
+
+tijera.addEventListener('click', () => {
+    console.log("Scissors");
+});
+
+
 btn.addEventListener('click', playRound);
-
-roca.addEventListener('click', rockFunc);
-papel.addEventListener('click', paperFunc);
-tijera.addEventListener('click', scisFunc);
-
-
-
 
 
 function rockFunc() {
@@ -29,13 +35,14 @@ function scisFunc() {
 let playerScore = 0, computerScore = 0;
 let compSelect = ['Rock', 'Paper', 'Scissors'];
 
+
 function computerPlay() {
     return compSelect[Math.floor(Math.random() * compSelect.length)];
    }
 
 
-function playRound (playerSelection = window.addEventListener('click', )) {
-
+function playRound (playerSelection) {
+    
     let computerSelection = computerPlay();
 
     if (playerSelection.toUpperCase() === computerSelection.toUpperCase()){
