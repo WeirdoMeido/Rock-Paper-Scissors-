@@ -25,9 +25,10 @@ font-weight: bold;
    gap: 20px;
 }
 
-button {
-   padding: 10px;
+.scores {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100vh;
    font-weight: bold;
-   font-size: 15px;
-   border:rgb(0, 0, 0) solid;
 }
