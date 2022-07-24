@@ -1,36 +1,20 @@
 const roca = document.querySelector('.roca');
 const papel = document.querySelector('.papel');
 const tijera = document.querySelector('.tijera');
-const btn = document.querySelector('.btn');
-const textDiv = document.querySelector('.parag');
+
+let textDiv = document.querySelector('.parag');
 
 roca.addEventListener('click', () => {
-    console.log("Rock");
+    playRound('ROCK');
 });
 
 papel.addEventListener('click', () => {
-    console.log("Paper");
+    playRound('PAPER');
 });
 
 tijera.addEventListener('click', () => {
-    console.log("Scissors");
+    playRound('SCISSORS');
 });
-
-
-btn.addEventListener('click', playRound);
-
-
-function rockFunc() {
-    return "ROCK";
-}
-
-function paperFunc() {
-    return "PAPER";
-}
-
-function scisFunc() {
-    return "SCISSORS";
-}
 
 let playerScore = 0, computerScore = 0;
 let compSelect = ['Rock', 'Paper', 'Scissors'];
@@ -42,29 +26,28 @@ function computerPlay() {
 
 
 function playRound (playerSelection) {
-    
     let computerSelection = computerPlay();
 
     if (playerSelection.toUpperCase() === computerSelection.toUpperCase()){
-return "It's a tie!";
+        document.querySelector('.parag').textContent = "It's a tie!";
     }
     else if (playerSelection.toUpperCase() === 'ROCK' && computerSelection.toUpperCase() === 'SCISSORS') {
-        return "You win! Rock beats scissors";
+        document.querySelector('.parag').textContent = "You win! Rock beats scissors";
     }
     else if (playerSelection.toUpperCase() === 'ROCK' && computerSelection.toUpperCase() === 'PAPER') {
-        return "You lose! Paper beats rock";
+        document.querySelector('.parag').textContent = "You lose! Paper beats rock";
     }
     else if (playerSelection.toUpperCase() === 'PAPER' && computerSelection.toUpperCase() === 'ROCK') {
-        return "You win! Paper beats rock";
+        document.querySelector('.parag').textContent = "You win! Paper beats rock";
     }
     else if (playerSelection.toUpperCase() === 'PAPER' && computerSelection.toUpperCase() === 'SCISSORS') {
-        return "You lose! Scissors beats paper";
+        document.querySelector('.parag').textContent = "You lose! Scissors beats paper";
     }
     else if (playerSelection.toUpperCase() === 'SCISSORS' && computerSelection.toUpperCase() === 'PAPER') {
-        return "You win! Scissors beats paper";
+        document.querySelector('.parag').textContent = "You win! Scissors beats paper";
     }
     else if (playerSelection.toUpperCase() === 'SCISSORS' && computerSelection.toUpperCase() === 'ROCK') {
-        return "You lose! Rock beats scissors";
+        document.querySelector('.parag').textContent = "You lose! Rock beats scissors";
     }
 }
 
