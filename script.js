@@ -1,10 +1,10 @@
 const roca = document.querySelector('.roca');
 const papel = document.querySelector('.papel');
 const tijera = document.querySelector('.tijera');
+const btn = document.querySelector('.btn');
 
 let humScore = document.querySelector('.pScore');
 let compScore = document.querySelector('.cScore');
-
 
 roca.addEventListener('click', () => {
     playRound('ROCK');
@@ -20,6 +20,14 @@ tijera.addEventListener('click', () => {
 
 let playerScore = 0, computerScore = 0;
 let compSelect = ['Rock', 'Paper', 'Scissors'];
+
+btn.addEventListener('click', () => {
+    playerScore = 0;
+    computerScore = 0;
+    humScore.textContent = `Player Score : ${playerScore}`;
+    compScore.textContent = `Computer Score : ${computerScore}`;
+    document.querySelector('.parag').textContent = "Make your selection";
+})
 
 humScore.textContent = `Player Score : ${playerScore}`;
 compScore.textContent = `Computer Score : ${computerScore}`;
@@ -86,3 +94,7 @@ function playRound (playerSelection) {
     }
 }
 
+function resetScores() {
+    playerScore = 0;
+    computerScore = 0;
+}
